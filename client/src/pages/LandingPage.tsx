@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Header } from '@components/Header/Header';
 import { ProductCard } from '@components/ProductCard/ProductCard';
@@ -54,7 +54,6 @@ export const LandingPage = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
       },
     },
   };
