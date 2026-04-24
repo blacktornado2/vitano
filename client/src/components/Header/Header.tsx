@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import logo from '@assets/logo.png';
+import logo from '@assets/logo.jpeg';
 
 interface HeaderProps {
   cartCount?: number;

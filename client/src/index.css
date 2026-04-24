@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 30 50% 97%;
     --foreground: 0 0% 3.6%;
     --border: 0 0% 89.8%;
     --input: 0 0% 100%;
@@ -44,6 +44,10 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    background-color: hsl(30 50% 97%);
   }
 }
 

@@ -6,7 +6,7 @@ import { CartDropdown } from '@components/Cart/CartDropdown';
 import { Footer } from '@components/Footer/Footer';
 import { useCart } from '@hooks/useCart';
 import type { Product } from '@types';
-import logo from '@assets/logo.png';
+import logo from '@assets/logo.jpeg';
 
 // Mock product data - replace with API call later
 const MOCK_PRODUCT: Product = {

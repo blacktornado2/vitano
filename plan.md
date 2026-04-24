@@ -133,13 +133,7 @@ vitano/
 - [ ] Cart item management (update qty, remove)
 - [ ] Cart persistence (session storage)
 
-### **Phase 3: Checkout**
-- [ ] Checkout page
-- [ ] Delivery address form
-- [ ] Order summary
-- [ ] Success mock (actual payment integration later)
-
-### **Phase 4: Animations & Polish**
+### **Phase 3: Animations & Polish**
 - [ ] Fade-in effects on scroll
 - [ ] Smooth button transitions
 - [ ] Cart item add animation
