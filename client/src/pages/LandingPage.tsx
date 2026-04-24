@@ -8,6 +8,42 @@ import { useCart } from '@hooks/useCart';
 import type { Product } from '@types';
 import logo from '@assets/logo.jpeg';
 
+// Testimonials data
+const TESTIMONIALS = [
+  {
+    id: 1,
+    name: 'Sarah Johnson',
+    role: 'Tech Enthusiast',
+    quote: 'Absolutely love the quality! The product exceeded my expectations. Customer service was exceptional and shipping was super fast.',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+  },
+  {
+    id: 2,
+    name: 'Rajesh Kumar',
+    role: 'Business Professional',
+    quote: 'Best purchase I\'ve made in a long time. The design is elegant and functionality is top-notch. Highly recommended to everyone!',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+  },
+  {
+    id: 3,
+    name: 'Priya Sharma',
+    role: 'Creative Director',
+    quote: 'Premium quality at reasonable price. The attention to detail is impressive. This is exactly what I was looking for!',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop',
+  },
+  {
+    id: 4,
+    name: 'Michael Chen',
+    role: 'Product Manager',
+    quote: 'Outstanding experience from start to finish. The product quality is exceptional and the support team is incredibly responsive.',
+    rating: 5,
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop',
+  },
+];
+
 // Mock product data - replace with API call later
 const MOCK_PRODUCT: Product = {
   id: '1',
@@ -323,6 +359,72 @@ export const LandingPage = () => {
           >
             Shop Now
           </motion.button>
+        </div>
+      </motion.section>
+
+      {/* Testimonials Section */}
+      <motion.section
+        className="w-full py-20 md:py-32 px-4 bg-muted/50 border-y border-border overflow-hidden"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="mx-auto max-w-7xl">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">What Our Customers Are Saying</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Real stories from our satisfied customers around the world
+            </p>
+          </motion.div>
+
+          {/* Testimonial Horizontal Scroll */}
+          <div className="relative w-full overflow-hidden">
+            <motion.div
+              className="flex gap-6 md:gap-8"
+              animate={{ x: [-100, -1400] }}
+              transition={{
+                duration: 30,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+            >
+              {[...TESTIMONIALS, ...TESTIMONIALS].map((testimonial, index) => (
+                <motion.div
+                  key={`${testimonial.id}-${index}`}
+                  className="flex-shrink-0 w-full md:w-96 bg-background rounded-lg border border-border p-8 shadow-md hover:shadow-lg transition-shadow"
+                  whileHover={{ y: -8 }}
+                >
+                  {/* Header with Image and Stars */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-16 h-16 rounded-full object-cover border-2 border-primary flex-shrink-0"
+                    />
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-foreground">{testimonial.name}</h3>
+                      <p className="text-sm text-muted-foreground mb-2">{testimonial.role}</p>
+                      <div className="flex gap-1">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span key={i} className="text-yellow-500 text-sm">★</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Quote */}
+                  <p className="text-foreground leading-relaxed italic">
+                    "{testimonial.quote}"
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Gradient Fade Effect */}
+            <div className="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-muted/50 to-transparent pointer-events-none" />
+            <div className="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-muted/50 to-transparent pointer-events-none" />
+          </div>
         </div>
       </motion.section>
 
