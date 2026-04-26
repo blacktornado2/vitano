@@ -1,5 +1,6 @@
 export { HeroSection } from './HeroSection';
 export { WhyVitanoSection } from './WhyVitanoSection';
+export { OurTeamSection } from './OurTeamSection';
 export { ProductsSection } from './ProductsSection';
 export { FeaturesSection } from './FeaturesSection';
 export { CTASection } from './CTASection';

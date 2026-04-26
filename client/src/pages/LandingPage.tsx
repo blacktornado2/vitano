@@ -6,6 +6,7 @@ import { useCart } from '@hooks/useCart';
 import {
   HeroSection,
   WhyVitanoSection,
+  OurTeamSection,
   TestimonialsSection,
   AboutSection,
 } from '@components/Sections';
@@ -50,6 +51,12 @@ export const LandingPage = () => {
 
       {/* Why Vitano Section */}
       <WhyVitanoSection
+        containerVariants={containerVariants}
+        itemVariants={itemVariants}
+      />
+
+      {/* Our Team Section */}
+      <OurTeamSection
         containerVariants={containerVariants}
         itemVariants={itemVariants}
       />

@@ -1,6 +1,7 @@
 import { motion, type Variants } from 'framer-motion';
 import logo from '@assets/logo.jpeg';
 import heroImage from '@assets/heroimage.png';
+import googleIcon from '@assets/google-icon.svg';
 
 interface HeroSectionProps {
   containerVariants: Variants;
@@ -124,7 +125,10 @@ export const HeroSection = ({ containerVariants, itemVariants }: HeroSectionProp
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <p className="text-xs text-muted-foreground font-medium">Google Reviews</p>
+              <div className="flex items-center gap-1.5 mb-1">
+                <img src={googleIcon} alt="Google" className="w-4 h-4" />
+                <p className="text-xs text-muted-foreground font-medium">Google Reviews</p>
+              </div>
               <p className="font-bold text-foreground text-sm">★★★★★ 4.9 / 5</p>
             </motion.div>
 
