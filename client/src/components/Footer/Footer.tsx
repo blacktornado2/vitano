@@ -72,8 +72,8 @@ export const Footer = () => {
             <h4 className="text-sm font-semibold text-foreground mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Email: info@vitano.com</li>
-              <li>Phone: +91 XXXX-XXXX-XXX</li>
-              <li>Address: India</li>
+              <li>Phone: +91 78389 31030</li>
+              <li>Address: <br/> Gali No 191, SVS Traders, Plot No 3781, <br/> Laxman Vihar Phase 2,<br/> Gurugram, Haryana, <br/> PIN - 122001</li>
             </ul>
           </div>
         </div>

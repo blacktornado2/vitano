@@ -29,7 +29,9 @@
       "@types": ["./src/types"],
       "@types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@constants": ["./src/constants"],
+      "@constants/*": ["./src/constants/*"]
     },
 
     /* Linting */

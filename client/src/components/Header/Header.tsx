@@ -33,35 +33,33 @@ export const Header = ({ cartCount = 0, onCartClick }: HeaderProps) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="/"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              Home
-            </a>
-            <a
-              href="#products"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              Products
-            </a>
-            <a
-              href="#about"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              Contact
-            </a>
+            {[
+              { label: 'Home', href: '#' },
+              { label: 'Why Vitano?', href: '#why-vitano' },
+              { label: 'Reviews', href: '#reviews' },
+              { label: 'About', href: '#about' },
+            ].map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                onClick={e => {
+                  e.preventDefault();
+                  if (href === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  } else {
+                    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
+              >
+                {label}
+              </a>
+            ))}
           </nav>
 
           {/* Cart Icon */}
           <div className="flex items-center space-x-4">
-            <motion.button
+            {/* <motion.button
               onClick={onCartClick}
               className="relative p-2 text-foreground hover:text-primary transition-colors"
               whileHover={{ scale: 1.1 }}
@@ -78,10 +76,10 @@ export const Header = ({ cartCount = 0, onCartClick }: HeaderProps) => {
                   {cartCount}
                 </motion.span>
               )}
-            </motion.button>
+            </motion.button> */}
 
             {/* Mobile Menu Button */}
-            <button
+            {/* <button
               className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -90,7 +88,7 @@ export const Header = ({ cartCount = 0, onCartClick }: HeaderProps) => {
               ) : (
                 <Menu className="w-6 h-6" />
               )}
-            </button>
+            </button> */}
           </div>
         </div>
 
@@ -102,30 +100,29 @@ export const Header = ({ cartCount = 0, onCartClick }: HeaderProps) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
           >
-            <a
-              href="/"
-              className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors"
-            >
-              Home
-            </a>
-            <a
-              href="#products"
-              className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors"
-            >
-              Products
-            </a>
-            <a
-              href="#about"
-              className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#contact"
-              className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors"
-            >
-              Contact
-            </a>
+            {[
+              { label: 'Home', href: '#' },
+              { label: 'Why Vitano?', href: '#why-vitano' },
+              { label: 'Reviews', href: '#reviews' },
+              { label: 'About', href: '#about' },
+            ].map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                onClick={e => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  if (href === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  } else {
+                    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors"
+              >
+                {label}
+              </a>
+            ))}
           </motion.nav>
         )}
       </div>

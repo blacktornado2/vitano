@@ -2,11 +2,10 @@
 
 ## 📋 Project Overview
 
-**Project Name:** Vitano (e-commerce app) (MERN + Nest.js)  
-**Target Market:** B2C, India  
-**MVP Goal:** Basic landing page with one product  
-**Target Audience:** Equal priority to mobile & desktop  
-**Timeline:** Open budget, estimated 2-3 days  
+**Project Name:** Vitano (e-commerce app) (MERN + Nest.js)
+**Target Market:** B2C, India
+**MVP Goal:** Basic landing page with one product
+**Target Audience:** Equal priority to mobile & desktop
 
 ---
 
