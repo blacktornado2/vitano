@@ -452,67 +452,86 @@ export const LandingPage = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
-                <text x="2" y="18" fontSize="14" fontWeight="900" fill="#EA4335">G</text>
-                <text x="9" y="18" fontSize="14" fontWeight="900" fill="#4285F4">o</text>
-                <text x="15" y="18" fontSize="14" fontWeight="900" fill="#FBBC04">o</text>
-                <text x="20" y="18" fontSize="14" fontWeight="900" fill="#EA4335">g</text>
+              <svg className="w-12 h-10" viewBox="0 0 70 24" fill="none">
+                <text x="0" y="18" fontSize="16" fontWeight="900" fill="#4285F4">G</text>
+                <text x="12" y="18" fontSize="16" fontWeight="900" fill="#EA4335">o</text>
+                <text x="24" y="18" fontSize="16" fontWeight="900" fill="#FBBC04">o</text>
+                <text x="36" y="18" fontSize="16" fontWeight="900" fill="#4285F4">g</text>
+                <text x="48" y="18" fontSize="16" fontWeight="900" fill="#34A853">l</text>
+                <text x="54" y="18" fontSize="16" fontWeight="900" fill="#EA4335">e</text>
               </svg>
               <span className="text-sm font-semibold text-primary">Google Reviews</span>
             </motion.div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">What Our Customers Are Saying</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Authentic 5-star reviews from our satisfied customers on Google Business Profile
+              Authentic reviews from our satisfied customers on Google Business Profile
             </p>
           </motion.div>
 
           {/* Testimonial Horizontal Scroll */}
           <div className="relative w-full overflow-hidden">
             <motion.div
-              className="flex gap-6 md:gap-8"
-              animate={{ x: [-100, -1400] }}
+              className="flex gap-6 md:gap-8 pt-8 pb-8"
+              animate={{ x: [-100, -2700] }}
               transition={{
-                duration: 30,
+                duration: 60,
                 repeat: Infinity,
-                ease: 'linear',3 border-primary flex-shrink-0 shadow-md"
-                    />
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-1">
-                        <h3 className="text-lg font-bold text-foreground">{testimonial.name}</h3>
-                        <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                      </div>
-                      <p className="text-sm text-muted-foreground mb-2">{testimonial.role} • Google</p>
-                      <div className="flex justify-between items-center">
-                        <div className="flex gap-0.5">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <span key={i} className="text-yellow-400 text-lg
-                  {/* Header with Image and Stars */}
-                  <div className="flex items-start gap-4 mb-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-primary flex-shrink-0"
-                    />
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-foreground">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground mb-2">{testimonial.role}</p>
-                      <div className="flex justify-between items-center">
-                        <div className="flex gap-1">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <span key={i} className="text-yellow-500 text-sm">★</span>
-                          ))}
+                ease: 'linear',
+              }}
+            >
+              {[...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS].map((testimonial, index) => (
+                <motion.div
+                  key={`${testimonial.id}-${index}`}
+                  className="flex-shrink-0 w-full md:w-96 bg-gray-100 rounded-xl border border-blue-100 p-6 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col"
+                  whileHover={{ y: -6 }}
+                >
+                  {/* Background Gradient Effect */}
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Content */}
+                  <div className="relative z-10 flex flex-col flex-1">
+                    {/* Header with Image and Info */}
+                    <div className="flex items-start justify-between gap-3 mb-4">
+                      <div className="flex items-start gap-3 flex-1">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-14 h-14 rounded-full object-cover border-2 border-primary/20 flex-shrink-0 shadow-sm"
+                        />
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2">
+                            <h3 className="text-base font-semibold text-foreground truncate">{testimonial.name}</h3>
+                            <svg className="w-4 h-4 text-blue-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                          </div>
+                          <p className="text-xs text-muted-foreground">{testimonial.role}</p>
                         </div>
-                        <span className="text-xs text-muted-foreground">{testimonial.date}</span>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Quote */}
-                  <p className="text-foreground leading-relaxed italic">
-                    "{testimonial.quote}"
-                  </p>
+                    {/* Stars */}
+                    <div className="flex gap-0.5 mb-3">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <span key={i} className="text-yellow-400 text-base">★</span>
+                      ))}
+                    </div>
+
+                    {/* Quote */}
+                    <div className="mb-4 flex-1">
+                      <p className="text-sm leading-relaxed text-foreground/90 line-clamp-4">
+                        "{testimonial.quote}"
+                      </p>
+                    </div>
+
+                    {/* Date Footer */}
+                    <div className="flex items-center justify-between pt-4 border-t border-border/50 mt-auto">
+                      <span className="text-xs text-muted-foreground">{testimonial.date}</span>
+                      <svg className="w-6 h-6 text-muted-foreground/70" viewBox="0 0 24 24" fill="currentColor">
+                        <text x="2" y="18" fontSize="14" fontWeight="900" fill="#EA4335">G</text>
+                      </svg>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
