@@ -36,27 +36,6 @@ const itemVariants = {
 export const LandingPage = () => {
   const { cart } = useCart();
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [contactForm, setContactForm] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
-
-  const handleContactChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setContactForm(prev => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', contactForm);
-    alert('Thank you for your message! We will get back to you soon.');
-    setContactForm({ name: '', email: '', subject: '', message: '' });
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">

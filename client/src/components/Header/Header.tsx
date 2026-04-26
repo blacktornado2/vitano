@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ShoppingCart, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import logo from '@assets/logo.jpeg';
 
@@ -8,7 +7,7 @@ interface HeaderProps {
   onCartClick?: () => void;
 }
 
-export const Header = ({ cartCount = 0, onCartClick }: HeaderProps) => {
+export const Header = ({ cartCount: _cartCount = 0, onCartClick: _onCartClick }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
