@@ -1,6 +1,6 @@
 import { motion, type Variants } from 'framer-motion';
 import logo from '@assets/logo.jpeg';
-import heroImage from '@assets/heroimage.png';
+import heroImage from '@assets/heroimage2.webp';
 import googleIcon from '@assets/google-icon.svg';
 
 interface HeroSectionProps {

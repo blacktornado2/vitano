@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
-import womanImage from '@assets/woman.png';
+import womanImage from '@assets/woman2.webp';
 
 interface WhyVitanoSectionProps {
   containerVariants: Variants;

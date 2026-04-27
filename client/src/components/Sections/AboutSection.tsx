@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
-import plantImage from '@assets/asafoetida_plant.png';
+import plantImage from '@assets/asafoetida_plant2.webp';
 
 interface AboutSectionProps {
   containerVariants: Variants;
