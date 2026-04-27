@@ -1,15 +1,18 @@
 import type { Product } from '@types';
+import hingFront from '@assets/hingfront.jpeg';
+import hingBack from '@assets/hingback.jpg';
 
-// Mock product data - replace with API call later
+// Product data - replace with API call later
 export const PRODUCT: Product = {
   id: '1',
-  name: 'Premium Wireless Headphones',
+  name: 'Vitano Pure Hing (Asafoetida)',
   description:
-    'Experience crystal-clear sound with our premium wireless headphones. featuring active noise cancellation, 30-hour battery life, and premium comfort padding.',
-  price: 12999,
-  image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
-  category: 'Electronics',
-  stock: 15,
-  rating: 4.5,
-  reviews: 128,
+    'Handcrafted, 100% pure and unadulterated Hing made fresh in-house. Our premium asafoetida delivers an authentic, robust aroma and flavour to elevate your everyday cooking.',
+  price: 105,
+  image: hingFront,
+  images: [hingFront, hingBack],
+  category: 'Spices',
+  stock: 50,
+  rating: 4.8,
+  reviews: 64,
 };

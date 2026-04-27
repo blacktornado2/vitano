@@ -7,9 +7,11 @@ import {
   HeroSection,
   WhyVitanoSection,
   OurTeamSection,
+  ProductsSection,
   TestimonialsSection,
   AboutSection,
 } from '@components/Sections';
+import { PRODUCT } from '@constants/products';
 
 // Animation variants
 const containerVariants = {
@@ -62,13 +64,11 @@ export const LandingPage = () => {
       />
 
       {/* Products Section */}
-      {/* <ProductsSection 
+      <ProductsSection 
         containerVariants={containerVariants} 
         itemVariants={itemVariants}
         product={PRODUCT}
-        onAddToCart={handleAddToCart}
-        isLoading={isLoading}
-      /> */}
+      />
 
       {/* Features Section */}
       {/* <FeaturesSection 

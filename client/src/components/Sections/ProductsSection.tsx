@@ -6,16 +6,12 @@ interface ProductsSectionProps {
   containerVariants: any;
   itemVariants: any;
   product: Product;
-  onAddToCart: (productId: string, quantity: number) => void;
-  isLoading: boolean;
 }
 
 export const ProductsSection = ({
   containerVariants,
   itemVariants,
   product,
-  onAddToCart,
-  isLoading,
 }: ProductsSectionProps) => {
   return (
     <motion.section
@@ -28,10 +24,10 @@ export const ProductsSection = ({
     >
       <div className="mx-auto max-w-7xl">
         <motion.div className="text-center mb-16" variants={itemVariants}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Product</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our <span className="text-primary">Products</span></h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our flagship product - a perfect blend of style, functionality, and
-            quality craftsmanship.
+            Handcrafted, 100% pure asafoetida — made fresh in-house with no
+            additives, fillers, or artificial colours.
           </p>
         </motion.div>
 
@@ -43,27 +39,27 @@ export const ProductsSection = ({
           {/* Left - Product Details */}
           <div className="space-y-6">
             <motion.div variants={itemVariants} className="space-y-4">
-              <h3 className="text-2xl font-bold text-foreground">Why Choose Us?</h3>
+              <h3 className="text-2xl font-bold text-foreground">Why Choose Our Hing?</h3>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Premium Quality Materials</span>
+                  <span>100% Pure & Unadulterated</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Lifetime Warranty</span>
+                  <span>Handcrafted Fresh In-House</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Free Shipping</span>
+                  <span>No Artificial Colours or Fillers</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>30-Day Money Back</span>
+                  <span>Rich Aroma & Authentic Flavour</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary font-bold">✓</span>
-                  <span>Expert Support</span>
+                  <span>Farm-to-Kitchen Freshness</span>
                 </li>
               </ul>
             </motion.div>
@@ -73,36 +69,39 @@ export const ProductsSection = ({
           <motion.div variants={itemVariants}>
             <ProductCard
               product={product}
-              onAddToCart={onAddToCart}
-              isLoading={isLoading}
             />
           </motion.div>
 
           {/* Right - Specifications */}
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="bg-muted/50 rounded-lg p-6 space-y-4 border border-border">
-              <h3 className="text-lg font-bold text-foreground">Specifications</h3>
+              <h3 className="text-lg font-bold text-foreground">Product Details</h3>
               <div className="space-y-3 text-sm">
                 <div>
-                  <p className="text-muted-foreground font-semibold">Driver Size</p>
-                  <p className="text-foreground">40mm Dynamic Driver</p>
+                  <p className="text-muted-foreground font-semibold">Ingredient</p>
+                  <p className="text-foreground">100% Pure Asafoetida (Hing)</p>
                 </div>
                 <div>
-                  <p className="text-muted-foreground font-semibold">Battery Life</p>
-                  <p className="text-foreground">30 Hours</p>
+                  <p className="text-muted-foreground font-semibold">Form</p>
+                  <p className="text-foreground">Powder / Compounded</p>
                 </div>
                 <div>
-                  <p className="text-muted-foreground font-semibold">Bluetooth</p>
-                  <p className="text-foreground">Bluetooth 5.0</p>
+                  <p className="text-muted-foreground font-semibold">Net Weight</p>
+                  <p className="text-foreground">10g</p>
                 </div>
                 <div>
-                  <p className="text-muted-foreground font-semibold">Weight</p>
-                  <p className="text-foreground">250g</p>
+                  <p className="text-muted-foreground font-semibold">Shelf Life</p>
+                  <p className="text-foreground">12 Months</p>
                 </div>
                 <div>
-                  <p className="text-muted-foreground font-semibold">Warranty</p>
-                  <p className="text-foreground">2 Years</p>
+                  <p className="text-muted-foreground font-semibold">Storage</p>
+                  <p className="text-foreground">Cool & Dry Place</p>
                 </div>
+              </div>
+              {/* FSSAI Badge */}
+              <div className="mt-4 p-3 bg-primary/10 border border-primary/30 rounded-lg text-center">
+                <p className="text-xs text-muted-foreground font-medium mb-1">FSSAI License No.</p>
+                <p className="text-sm font-bold text-primary tracking-wide">1082600500691</p>
               </div>
             </div>
           </motion.div>

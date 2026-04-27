@@ -62,7 +62,6 @@ export const HeroSection = ({ containerVariants, itemVariants }: HeroSectionProp
             {/* Quality badges row */}
             <motion.div variants={itemVariants} className="flex flex-wrap gap-3">
               {[
-                { label: 'No Maida Added', icon: '🚫' },
                 { label: 'Lab-Tested Purity', icon: '🔬' },
                 { label: 'FSSAI Certified', icon: '✅' },
                 { label: 'Direct from Source', icon: '🌱' },

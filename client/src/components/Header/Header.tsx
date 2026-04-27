@@ -36,6 +36,7 @@ export const Header = ({ cartCount: _cartCount = 0, onCartClick: _onCartClick }:
               { label: 'Home', href: '#' },
               { label: 'Why Vitano?', href: '#why-vitano' },
               { label: 'Our Team', href: '#our-team' },
+              { label: 'Our Products', href: '#products' },
               { label: 'Reviews', href: '#reviews' },
               { label: 'About', href: '#about' },
             ].map(({ label, href }) => (
@@ -103,6 +104,7 @@ export const Header = ({ cartCount: _cartCount = 0, onCartClick: _onCartClick }:
             {[
               { label: 'Home', href: '#' },
               { label: 'Why Vitano?', href: '#why-vitano' },
+              { label: 'Our Products', href: '#products' },
               { label: 'Reviews', href: '#reviews' },
               { label: 'About', href: '#about' },
             ].map(({ label, href }) => (

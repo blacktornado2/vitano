@@ -28,17 +28,17 @@ export const Footer = () => {
             <h4 className="text-sm font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#hero" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer" onClick={(e) => { e.preventDefault(); document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }); }}>
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#products" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer" onClick={(e) => { e.preventDefault(); document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' }); }}>
                   Products
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="#our-team" className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer" onClick={(e) => { e.preventDefault(); document.getElementById('our-team')?.scrollIntoView({ behavior: 'smooth' }); }}>
                   About
                 </a>
               </li>
@@ -72,14 +72,21 @@ export const Footer = () => {
             <h4 className="text-sm font-semibold text-foreground mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Email: info@vitano.com</li>
-              <li>Phone: +91 78389 31030</li>
-              <li>Address: <br/> Gali No 191, SVS Traders, Plot No 3781, <br/> Laxman Vihar Phase 2,<br/> Gurugram, Haryana, <br/> PIN - 122001</li>
+              <li>Phone: +91 90504 65440</li>
+              <li>Address: <br/> SVS Traders, House no. 3781, <br/>Shri Ganesh Apartment, Gali no. 191 <br/> Laxman Vihar Phase 2,<br/> Gurugram, Haryana, <br/> PIN - 122001</li>
             </ul>
           </div>
         </div>
 
         {/* Divider */}
         <div className="border-t border-border my-8" />
+
+        {/* FSSAI */}
+        <div className="flex justify-center mb-6">
+          <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm">
+            <span className="font-bold text-primary">FSSAI Lic. No. 1082600500691</span>
+          </span>
+        </div>
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between">

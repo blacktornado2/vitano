@@ -12,7 +12,7 @@ const REASONS = [
     title: 'Unadulterated & Pure',
     description:
       'Our Hing is 100% pure asafoetida resin — no maida, no fillers, no artificial additives. Just the real thing, exactly as nature intended. Every batch is lab-tested before it reaches your kitchen.',
-    badges: ['No Maida', 'Lab-Tested', 'Zero Additives'],
+    badges: ['Lab-Tested', 'Zero Additives'],
     accent: 'from-green-50 to-emerald-50',
     border: 'border-green-100',
     iconBg: 'bg-green-100',

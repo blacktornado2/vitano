@@ -51,9 +51,11 @@ export const OurTeamSection = ({ containerVariants, itemVariants }: OurTeamSecti
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-amber-100/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   {/* Avatar */}
-                  <div className="flex items-center justify-center h-full text-7xl">
-                    {member.image}
-                  </div>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </motion.div>
 
                 {/* Member Info */}
